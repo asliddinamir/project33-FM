@@ -17,6 +17,7 @@ body {
     background: url('./images/bg-desktop.png') no-repeat center bottom hsl(229, 57%, 11%);
     background-size: 100% 50vh;
     padding: 2rem;
+    line-height: 1.3;
 }
 
 .container {
@@ -60,14 +61,62 @@ body {
     cursor: pointer;
 }
 
-
 .right {
     display: flex;
     background: hsl(228, 56%, 26%);
     flex-direction: column;
+    justify-content: center;
     height: 150px;
     max-width: 600px;
     width: 100%;
     padding: 2rem;
     border-radius: 15px;
+}
+
+.right p {
+    font-weight: 100;
+    margin-bottom: 0.2rem;
+}
+
+.strong {
+    color: #fff;
+}
+
+
+.meter {
+    display: block;
+    width: 100%;
+    height: 1.25rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    background-color: hsl(229, 57%, 11%);
+    margin-bottom: 0.2rem;
+}
+
+.meter::-webkit-meter-bar {
+    width: 100%;
+    height: 1.25rem;
+    padding: 0.125rem 0;
+    border: none;
+    background: none;
+}
+
+.meter::-moz-meter-bar {
+    width: 100%;
+    border-radius: 5rem;
+    background: none;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.meter::-webkit-meter-optimum-value {
+    border-radius: 5rem;
+    background: none;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.range p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
 }
