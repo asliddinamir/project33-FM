@@ -18,6 +18,7 @@ body {
     background-size: 100% 50vh;
     padding: 2rem;
     line-height: 1.3;
+    position: relative;
 }
 
 .container {
@@ -122,25 +123,29 @@ body {
     font-weight: bold;
 }
 
-.notice {
-    position: absolute;
-    top: -2.5875rem;
-    right: 2rem;
-    color: hsl(229, 57%, 11%);
-    padding: 0.5rem 1rem;
-    border-radius: 0.6rem .6rem 0 .6rem;
-    background-color: hsl(0, 0%, 100%);
-}
 
-.notice::after {
-    position: absolute;
-    content: "";
-    width: 2.1875rem;
-    height: 1.875rem;
-    bottom: -1.5rem;
-    right: 0;
-    clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
-    background-color: hsl(0, 0%, 100%);
+
+@media(min-width:776px) {
+    .notice {
+        position: absolute;
+        top: -2.5875rem;
+        right: 2rem;
+        color: hsl(229, 57%, 11%);
+        padding: 0.5rem 1rem;
+        border-radius: 0.6rem .6rem 0 .6rem;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .notice::after {
+        position: absolute;
+        content: "";
+        width: 2.1875rem;
+        height: 1.875rem;
+        bottom: -1.5rem;
+        right: 0;
+        clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+        background-color: hsl(0, 0%, 100%);
+    }
 }
 
 .notice h2 {
@@ -156,4 +161,49 @@ body {
     font-size: 0.75rem;
     letter-spacing: 0.08rem;
     color: hsl(229, 7%, 55%);
+}
+
+footer {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+}
+
+footer a {
+    color: red;
+}
+
+
+@media(max-width:775px) {
+    body {
+        background: url('./images/bg-mobile.png') no-repeat top center/cover hsl(229, 57%, 11%);
+        width: 100%;
+        height: 100%;
+        padding: .5rem;
+    }
+
+    .container {
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        max-width: 330px;
+        position: relative;
+    }
+
+    .notice {
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: hsl(229, 57%, 11%);
+        padding: 0.5rem 1rem;
+        border-radius: 0.6rem;
+        background-color: hsl(0, 0%, 100%);
+    }
 }
