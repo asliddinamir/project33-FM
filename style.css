@@ -71,6 +71,7 @@ body {
     width: 100%;
     padding: 2rem;
     border-radius: 15px;
+    position: relative;
 }
 
 .right p {
@@ -119,4 +120,40 @@ body {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+}
+
+.notice {
+    position: absolute;
+    top: -2.5875rem;
+    right: 2rem;
+    color: hsl(229, 57%, 11%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem .6rem 0 .6rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.notice::after {
+    position: absolute;
+    content: "";
+    width: 2.1875rem;
+    height: 1.875rem;
+    bottom: -1.5rem;
+    right: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.notice h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.notice small {
+    font-size: 0.75rem;
+    letter-spacing: 0.08rem;
+    color: hsl(229, 7%, 55%);
 }
