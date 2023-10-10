@@ -32,7 +32,8 @@ body {
     background: hsl(228, 56%, 26%);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 1rem;
     align-items: start;
     width: 100%;
     max-width: 20.625rem;
@@ -40,6 +41,25 @@ body {
     padding: 2rem;
     border-radius: 15px 100px 15px 15px;
 }
+
+.icons {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .6rem;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 
 .right {
     display: flex;
