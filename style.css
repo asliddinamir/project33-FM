@@ -14,14 +14,18 @@ body {
     justify-content: center;
     color: hsl(243, 100%, 93%);
     min-height: 100vh;
-    background: url('./images/bg-desktop.png') no-repeat center bottom/contain hsl(229, 57%, 11%);
+    background: url('./images/bg-desktop.png') no-repeat center bottom hsl(229, 57%, 11%);
+    background-size: 100% 50vh;
+    padding: 2rem;
 }
 
 .container {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: end;
     gap: 2rem;
     height: auto;
+    width: 100%;
 }
 
 .left {
@@ -30,8 +34,20 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
-    width: 350px;
+    width: 100%;
+    max-width: 20.625rem;
     height: 200px;
     padding: 2rem;
     border-radius: 15px 100px 15px 15px;
+}
+
+.right {
+    display: flex;
+    background: hsl(228, 56%, 26%);
+    flex-direction: column;
+    height: 150px;
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 15px;
 }
